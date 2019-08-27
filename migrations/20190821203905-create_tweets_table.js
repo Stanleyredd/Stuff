@@ -11,7 +11,8 @@ module.exports = {
                 autoIncrement: true,
                 primaryKey: true
             },
-            content: Sequelize.STRING(300),
+            // content: Sequelize.STRING(300),
+            content: Sequelize.CHAR(300),
             userId: Sequelize.INTEGER(11),
             //Those are added by default on insertion (make sure to create the their columns)
             createdAt: Sequelize.DATE,

@@ -8,12 +8,14 @@ module.exports = sequelize.define("users", {
         primaryKey: true
     },
     username: {
-        type: Sequelize.STRING(35),
+        // type: Sequelize.STRING(35),
+        type: Sequelize.CHAR(35),
         allowNull: false,
         unique: true
     },
     passwd: {
-        type: Sequelize.STRING(20),
+        // type: Sequelize.STRING(20),
+        type: Sequelize.CHAR(20),
         allowNull: false
     }
 });

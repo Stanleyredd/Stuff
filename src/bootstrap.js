@@ -11,21 +11,15 @@ module.exports = async () => {
 
 
     const user = await User.create({
-        username: "stanle",
-        passwd: "tesadssdsat123"
+        username: "test1",
+        passwd: "tesat123"
     }).catch(errHandler);
     const users = await User.findAll({
-        where: { username: "stanle" },
-        include: [{ model: Tweet, as: "Tweets" }] ///< include used to eager-load associated model
+        where: {username: "test1"},
+        include: [{model: Tweet, as: "Tweets"}] ///< include used to eager-load associated model
     }).catch(errHandler);
 
-    // const tweet = await Tweet.create({
-    //     content: "This is actually the tweet content Tweeted from Iphone",
-    //     userId: user.id
-    // }).catch(errHandler);
 
-
-
-    console.log("Stanle Tweets: ", users);
+    console.log("Test1 Tweets: ", users);
 
 };

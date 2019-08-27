@@ -7,7 +7,8 @@ module.exports = sequelize.define("tweets", {
         autoIncrement: true,
         primaryKey: true
     },
-    content: Sequelize.STRING(300)
+    // content: Sequelize.STRING(300)
+    content: Sequelize.CHAR(300)
 });
 
 
